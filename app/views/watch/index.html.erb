@@ -1,3 +1,6 @@
+<%= render "layouts/header" %>
+
+<%= link_to "new watch", new_watch_path %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,17 +9,35 @@
 	<title>watches</title>
 </head>
 <body>
-	<h1 class="center-txt">WATCHES</h1>
-
+<br>
+<br>
+	<% for x in @watches %>
+	<!-- watch box -->
+	<%= link_to	watch_path(x.id) do %>
+		<div style="border: 1px solid black;" class="box">
+			<p class="center-txt">
+				<%= x.brand %>
+			</p>
+			<img src="https://cdn-images.farfetch-contents.com/18/46/81/34/18468134_39828104_1000.jpg" style="max-width: 70%; display: block; margin: auto;" class="mt-1">
+			<p class="center-txt">
+				<%= x.name %> - <%= x.price %>				
+			</p>
+			</p>
+		</div>
+	<% end %>
+	<!-- watch box end -->
+	<% end %>
 </body>
 </html>
 
 
 <style type="text/css">
-	body{
-		font-family: helvetica;
+	.box{
+		width: 320px;
+		height: 450px;
 	}
-	.center-txt{
-		text-align: center;
+	.box:hover {
+		opacity: 0.5;
+		cursor: pointer;
 	}
 </style>

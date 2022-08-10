@@ -10,19 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_05_102533) do
-  create_table "watchbwics", force: :cascade do |t|
-    t.string "name"
-    t.integer "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
+ActiveRecord::Schema[7.0].define(version: 2022_08_10_140615) do
   create_table "watches", force: :cascade do |t|
     t.string "name"
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "description"
+    t.string "reference_link"
+    t.string "condition"
+    t.string "production_year"
+    t.string "original_box"
+    t.string "original_papers"
+    t.string "location"
+    t.string "listing_code"
+    t.string "brand"
+    t.string "model"
+    t.string "reference_number"
+    t.string "movement"
+    t.string "case_material"
+    t.string "bracelet_material"
   end
 
 end

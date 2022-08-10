@@ -1,0 +1,87 @@
+<%= render "layouts/header" %>
+<section style="margin: 100px;" class="d-flex-center">
+	
+	<%= form_for :watch do |f| %>
+		
+	  <%= f.text_field :name, class: "input-field", placeholder: "NAME" %>
+	  <br>
+	  <br>
+	  <%= f.text_field :condition, class: "input-field", placeholder: "BRAND" %>
+	  <br>
+	  <br>
+	  <%= f.text_field :price, class: "input-field", placeholder: "PRICE" %>
+	  <br>
+	  <br>
+	  <%= f.number_field :production_year, class: "input-field", placeholder: "PROD. YEAR" %>
+	  <br>
+	  <br>
+	  <%= f.text_field :brand, class: "input-field", placeholder: "BRAND" %>
+	  <br>
+	  <br>
+	  <%= f.text_field :condition, class: "input-field", placeholder: "CONDITION" %>
+	  <br>
+	  <br>
+	  <%= f.text_field :original_box, class: "input-field", placeholder: "ORIGINAL BOX?" %>
+	  <br>
+	  <br>
+	  <%= f.text_field :original_papers, class: "input-field", placeholder: "ORIGINAL PAPERS?" %>
+	  <br>
+	  <br>
+	  <%= f.text_field :location, class: "input-field", placeholder: "LOCATION" %>
+	  <br>
+	  <br>
+	  <%= f.text_field :listing_code, class: "input-field", placeholder: "LISTING CODE" %>
+	  <br>
+	  <br>
+	  <%= f.text_field :model, class: "input-field", placeholder: "MODEL" %>
+	  <br>
+	  <br>
+	  <%= f.text_field :reference_number, class: "input-field", placeholder: "REFERNCE NUMBER" %>
+	  <br>
+	  <br>
+	  <%= f.text_field :case_material, class: "input-field", placeholder: "CASE MATERIAL" %>
+	  <br>
+	  <br>
+	  <%= f.text_field :movement, class: "input-field", placeholder: "MOVEMENT" %>
+	  <br>
+	  <br>
+	  <%= f.text_field :bracelet_material, class: "input-field", placeholder: "BRACELET MATERIAL" %>
+	  <br>
+	  <br>
+	  <%= f.text_field :reference_link, class: "input-field", placeholder: "REFERENCE LINK" %>
+	  <br>
+	  <br>
+
+	  <%= f.submit %>
+	<% end %>
+
+</section>
+
+
+<style type="text/css">
+	.input-field{
+		height: 35px;
+		min-height: 35px;
+		min-width: 300px;
+		width: 300px;
+		font-size: 16px;
+		padding-left: 15px;
+	}
+
+	.select-field{
+
+	}
+
+	::placeholder{
+		font-size: 16px;
+		color: grey;
+	}
+</style>
+
+params.require(:watch).permit(:name, :condition, :production_year, 
+    		:price, :brand, :condition, :original_box, :original_papers, 
+    		:location, :listing_code, :model, :reference_number, :case_material, 
+    		:movement, :bracelet_material, :reference_link, :price_talk)
+  	end
+
+end

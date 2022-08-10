@@ -1,0 +1,70 @@
+<%= render "layouts/header" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<title>watch view</title>
+</head>
+<body>
+
+<h1 class="center-txt"><%= @watch.name %> - <p><%=@watch.price%></p></h1>
+
+<section class="d-flex-center"  style="border: 1px solid black;">
+
+  <!-- slide show -->
+  <div  style="border: 1px solid black;" class="w3-display-container d-flex-center">
+    <img class="mySlides img-size" src="https://cdn2.chrono24.com/images/uhren/20152941-waty20kz3qnynlgvn889gv8w-ExtraLarge.jpg" style="width:100%">
+
+    <img class="mySlides img-size" src="https://cdn-images.farfetch-contents.com/18/46/81/34/18468134_39828104_1000.jpg" style="width:100%">
+    <img class="mySlides" src="img_mountains.jpg" style="width:100%">
+    <img class="mySlides" src="img_forest.jpg" style="width:100%">
+
+    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" style="righ" onclick="plusDivs(1)">&#10095;</button>
+  </div>
+  <!-- slideshow end -->
+
+    <!-- desc div -->
+  <div style="border: 1px solid black; margin-left:150px;">
+    <h4>description</h4>
+    <textarea>this is a description</textarea>
+  </div>
+ <!-- desc div -->
+ 
+</section>
+</body>
+</html>
+
+
+<!-- slide show -->
+<style>
+	.mySlides {display:none;}
+	.img-size{
+		max-width: 45%;
+	}
+</style>
+
+
+<script type="text/javascript">
+	var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+<!-- slide show end -->
