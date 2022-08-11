@@ -51,6 +51,13 @@
 	  <%= f.text_field :reference_link, class: "input-field", placeholder: "REFERENCE LINK" %>
 	  <br>
 	  <br>
+  	  <%= f.file_field :photo1, as: :file %>
+  	  <br>
+  	  <br>
+  	  <%= f.file_field :photo2, as: :file %>
+  	  <br>
+  	  <br>
+  	  <%= f.file_field :photo3, as: :file %>
 
 	  <%= f.submit %>
 	<% end %>

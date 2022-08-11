@@ -20,13 +20,13 @@
 <section class="d-flex-center"  style="border: 1px solid black;">
 
   <!-- slide show -->
-  <div  style="border: 1px solid black;" class="w3-display-container d-flex-center">
-    <img class="mySlides img-size" src="https://cdn2.chrono24.com/images/uhren/20152941-waty20kz3qnynlgvn889gv8w-ExtraLarge.jpg" style="width:100%">
+  <div  style="border: 1px solid black;" style="width: 700px; max-width: 700px;"class="w3-display-container d-flex-center">
+    <%= cl_image_tag @watch.photo1.key, height: 750, width: 750, class: "mySlides img-size", crop: :fill %>
 
-    <img class="mySlides img-size" src="https://cdn-images.farfetch-contents.com/18/46/81/34/18468134_39828104_1000.jpg" style="width:100%">
-    <img class="mySlides" src="img_mountains.jpg" style="width:100%">
-    <img class="mySlides" src="img_forest.jpg" style="width:100%">
-
+    <%= cl_image_tag @watch.photo2.key, height: 750, width: 750, class: "mySlides img-size", crop: :fill %>
+    <% if @watch.photo3.present? %>
+      <%= cl_image_tag @watch.photo3.key, height: 750, width: 750, class: "mySlides img-size", crop: :fill %>
+    <% end %>
     <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
     <button class="w3-button w3-black w3-display-right" style="righ" onclick="plusDivs(1)">&#10095;</button>
   </div>
