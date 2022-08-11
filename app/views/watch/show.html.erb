@@ -12,6 +12,9 @@
 
 <%= link_to 'edit watch', edit_watch_path(@watch) %>
 
+
+<%= link_to watch_index_path(@watch), method: :delete %>
+
 <h1 class="center-txt"><%= @watch.name %> - <p><%=@watch.price%></p></h1>
 
 <section class="d-flex-center"  style="border: 1px solid black;">

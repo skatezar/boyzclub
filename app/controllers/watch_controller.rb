@@ -34,8 +34,11 @@ class WatchController < ApplicationController
 
 	def destroy
 		@watch = Watch.find(params[:id])
-		@watch.destroy
-		redirect_to watch_index_path
+		if @watch.destroy
+			redirect_to watch_index_path
+		else 
+			render :new
+		end
 	end
 
 	def watch_params
