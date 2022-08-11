@@ -20,6 +20,24 @@ class WatchController < ApplicationController
 		end
 	end
 
+
+	def edit
+		@watch = Watch.find(params[:id])
+	end
+
+	def update
+		@watch = Watch.find(params[:id])
+		@watch.update(watch_params)
+
+		redirect_to watch_path(@watch)
+	end
+
+	def destroy
+		@watch = Watch.find(params[:id])
+		@watch.destroy
+		redirect_to watch_index_path
+	end
+
 	def watch_params
     	params.require(:watch).permit(:name, :condition, :production_year, 
     		:price, :brand, :condition, :original_box, :original_papers, 

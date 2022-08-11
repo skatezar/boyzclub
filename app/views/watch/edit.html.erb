@@ -1,7 +1,7 @@
 <%= render "layouts/header" %>
 <section style="margin: 100px;" class="d-flex-center">
 	
-	<%= form_for @watch, :url => watch_index_path do |f| %>
+	<%= form_for @watch do |f| %>
 		
 	  <%= f.text_field :name, class: "input-field", placeholder: "NAME" %>
 	  <br>
