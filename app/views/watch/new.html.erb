@@ -1,12 +1,12 @@
 <%= render "layouts/header" %>
 <section style="margin: 100px;" class="d-flex-center">
 	
-	<%= form_for :watch do |f| %>
+	<%= form_for @watch, :url => watch_index_path do |f| %>
 		
 	  <%= f.text_field :name, class: "input-field", placeholder: "NAME" %>
 	  <br>
 	  <br>
-	  <%= f.text_field :condition, class: "input-field", placeholder: "BRAND" %>
+	  <%= f.text_field :condition, class: "input-field", placeholder: "CONDITION" %>
 	  <br>
 	  <br>
 	  <%= f.text_field :price, class: "input-field", placeholder: "PRICE" %>
@@ -16,9 +16,6 @@
 	  <br>
 	  <br>
 	  <%= f.text_field :brand, class: "input-field", placeholder: "BRAND" %>
-	  <br>
-	  <br>
-	  <%= f.text_field :condition, class: "input-field", placeholder: "CONDITION" %>
 	  <br>
 	  <br>
 	  <%= f.text_field :original_box, class: "input-field", placeholder: "ORIGINAL BOX?" %>

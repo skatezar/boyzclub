@@ -13,10 +13,14 @@ class WatchController < ApplicationController
 
 	def create
 		@watch = Watch.new(watch_params)
-
+		if @watch.save
+			redirect_to watch_path(@watch)
+		else
+			render :new
+		end
 	end
 
-	def item_params
+	def watch_params
     	params.require(:watch).permit(:name, :condition, :production_year, 
     		:price, :brand, :condition, :original_box, :original_papers, 
     		:location, :listing_code, :model, :reference_number, :case_material, 
