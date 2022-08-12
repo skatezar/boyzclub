@@ -14,23 +14,29 @@
 <body>
 <br>
 <br>
-<section class="d-flex-around row">
-	<div class="row">
+<section class="container">
 	<% for x in @watches %>
+	<div class="row">
 	<!-- watch box -->
+	<div style="border: 1px solid black;" class="box col-lg-2 col-md-2 col-sm-2 col-2">
 	<%= link_to	watch_path(x.id) do %>
-		<div style="border: 1px solid black;" class="box col ">
+		
 			<br>
-			<img src="https://cdn-images.farfetch-contents.com/18/46/81/34/18468134_39828104_1000.jpg" style="max-width: 70%; display: block; margin: auto;" class="mt-1">
-			<p class="center-txt">
+			
+			<div class="d-flex justify-content-center">
+				<%= cl_image_tag x.photo1.key, height: 375, width: 280, crop: :fill %>
+			</div>
+	<% end %>
+			<p class="center-txt txt" style="text-decoration: none;">
 				<%= x.name %> - <%= x.price %>				
 			</p>
 			</p>
 		</div>
-	<% end %>
+	
+	</div>
 	<!-- watch box end -->
 	<% end %>
-	</div>
+	
 </section>
 </body>
 </html>
@@ -57,26 +63,20 @@
 	.watch-btn:hover{
 		opacity:  0.5;
 	}
+
+	.title-txt{
+        font-size:20px;
+        text-decoration:none;
+        padding: 10px;
+        color:  black;
+        border:  1px solid black;
+	}
+
+	.txt{
+		margin-top: 7px;
+		font-size: 19px;
+		color: black;
+		text-decoration: none;
+	}
 </style>
 
-<div class="container">
-  <div class="row" style="border: 1px solid black;">
-    <div class="col" style="border: 1px solid black;">
-      1 of 2
-    </div>
-    <div class="col" style="border: 1px solid black;">
-      2 of 2
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      1 of 3
-    </div>
-    <div class="col">
-      2 of 3
-    </div>
-    <div class="col">
-      3 of 3
-    </div>
-  </div>
-</div>

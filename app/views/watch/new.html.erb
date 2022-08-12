@@ -45,21 +45,33 @@
 	  <%= f.text_field :bracelet_material, class: "input-field", placeholder: "BRACELET MATERIAL" %>
 	  <br>
 	  <br>
-	  <%= f.text_area :description, class: "textarea-field", placeholder: "description" %>
+	  <%= f.text_area :description, class: "textarea-field", style: 'padding-left:15px;', placeholder: "description" %>
 	  <br>
 	  <br>
 	  <%= f.text_field :reference_link, class: "input-field", placeholder: "REFERENCE LINK" %>
 	  <br>
 	  <br>
+
+	  <p>
+	  	front pic
+	  </p>
   	  <%= f.file_field :photo1, as: :file %>
   	  <br>
   	  <br>
+  	  <p>
+	  	pic 2
+	  </p>
   	  <%= f.file_field :photo2, as: :file %>
   	  <br>
   	  <br>
+  	  <p>
+	  	pic 3
+	  </p>
   	  <%= f.file_field :photo3, as: :file %>
+  	  <br>
+  	  <br>
+  	  <%= f.submit 'UPLOAD', :class => 'submit-btn' %>
 
-	  <%= f.submit %>
 	<% end %>
 
 </section>
@@ -88,12 +100,13 @@
 		height: 80px;
 		width: 315px;
 	}
+
+	.submit-btn{
+		padding: 30px 120px;
+		background-color:  white;
+		border:  1px solid black;
+	}
+	.submit-btn:hover{
+		opacity:  0.5;
+	}
 </style>
-
-params.require(:watch).permit(:name, :condition, :production_year, 
-    		:price, :brand, :condition, :original_box, :original_papers, 
-    		:location, :listing_code, :model, :reference_number, :case_material, 
-    		:movement, :bracelet_material, :reference_link, :price_talk)
-  	end
-
-end
