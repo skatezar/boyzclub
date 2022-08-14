@@ -5,23 +5,42 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+	<!-- desktop view -->
 	<br>
 	<div class="d-flex-around" >
 		<span class="mt-1">
-			<%= link_to "HOME", watch_index_path, class: 'title-txt' %>
+			<%= link_to "HOME", watch_index_path, class: 'header-btn' %>
 		</span>
 
 		<span>
-			<h1 class="center-txt">PRIVATE WATCHES</h1>
+			<h1>
+				<%= link_to "PRIVATE WATCHES", watch_index_path, class: 'no-deco round-bdr', style:'color:black;' %>	
+			</h1>
 		</span>
 		
 		<span class="mt-1">
-			<%= link_to "ABOUT US", watch_index_path, class: 'title-txt' %>
+			<%= link_to "ABOUT US", watch_index_path, class: 'header-btn' %>
 		</span>
 	</div>
 	
 	<hr>
+	<!-- end desktop view -->
+
+	<!-- mobile view -->
+
+	<!-- end mobile view -->
 
 </body>
 </html>
 
+<style type="text/css">
+	.header-btn{
+		text-decoration: none;
+		color: black;
+		font-size: 20px;
+	}
+
+	.header-btn:hover{
+		color: pink;
+	}
+</style>

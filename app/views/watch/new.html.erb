@@ -1,54 +1,58 @@
-<%= render "layouts/header" %>
-<section style="margin: 100px;" class="d-flex-center">
-	
+<h4 class="center-txt">ADMIN ONLY</h4>
+<br>
+<section class="d-flex-center">
+
 	<%= form_for @watch, :url => watch_index_path do |f| %>
 		
-	  <%= f.text_field :name, class: "input-field", placeholder: "NAME" %>
+	  <%= f.text_field :name, class: "input-field", placeholder: "NAME", required: true %>
 	  <br>
 	  <br>
-	  <%= f.text_field :condition, class: "input-field", placeholder: "CONDITION" %>
+	  <%= f.text_field :condition, class: "input-field", placeholder: "CONDITION", required: true %>
 	  <br>
 	  <br>
-	  <%= f.text_field :price, class: "input-field", placeholder: "PRICE" %>
+	  <%= f.text_field :price, class: "input-field", placeholder: "PRICE", required: true %>
 	  <br>
 	  <br>
-	  <%= f.number_field :production_year, class: "input-field", placeholder: "PROD. YEAR" %>
+	  <%= f.number_field :production_year, class: "input-field", placeholder: "PROD. YEAR", required: true %>
 	  <br>
 	  <br>
-	  <%= f.text_field :brand, class: "input-field", placeholder: "BRAND" %>
+	  <%= f.text_field :brand, class: "input-field", placeholder: "BRAND", required: true%>
 	  <br>
 	  <br>
-	  <%= f.text_field :original_box, class: "input-field", placeholder: "ORIGINAL BOX?" %>
+	  <%= f.text_field :original_box, class: "input-field", placeholder: "ORIGINAL BOX?", required: true %>
 	  <br>
 	  <br>
-	  <%= f.text_field :original_papers, class: "input-field", placeholder: "ORIGINAL PAPERS?" %>
+	  <%= f.text_field :original_papers, class: "input-field", placeholder: "ORIGINAL PAPERS?", required: true %>
 	  <br>
 	  <br>
-	  <%= f.text_field :location, class: "input-field", placeholder: "LOCATION" %>
+	  <%= f.text_field :location, class: "input-field", placeholder: "LOCATION", required: true %>
 	  <br>
 	  <br>
-	  <%= f.text_field :listing_code, class: "input-field", placeholder: "LISTING CODE" %>
+	  <%= f.text_field :listing_code, class: "input-field", placeholder: "LISTING CODE", required: true %>
 	  <br>
 	  <br>
-	  <%= f.text_field :model, class: "input-field", placeholder: "MODEL" %>
+	  <%= f.text_field :model, class: "input-field", placeholder: "MODEL", required: true %>
 	  <br>
 	  <br>
-	  <%= f.text_field :reference_number, class: "input-field", placeholder: "REFERNCE NUMBER" %>
+	  <%= f.text_field :reference_number, class: "input-field", placeholder: "REFERNCE NUMBER", required: true %>
 	  <br>
 	  <br>
-	  <%= f.text_field :case_material, class: "input-field", placeholder: "CASE MATERIAL" %>
+	  <%= f.text_field :case_material, class: "input-field", placeholder: "CASE MATERIAL", required: true %>
 	  <br>
 	  <br>
-	  <%= f.text_field :movement, class: "input-field", placeholder: "MOVEMENT" %>
+	  <%= f.text_field :movement, class: "input-field", placeholder: "MOVEMENT", required: true%>
 	  <br>
 	  <br>
-	  <%= f.text_field :bracelet_material, class: "input-field", placeholder: "BRACELET MATERIAL" %>
+	  <%= f.text_field :bracelet_material, class: "input-field", placeholder: "BRACELET MATERIAL", required: true %>
 	  <br>
 	  <br>
-	  <%= f.text_area :description, class: "textarea-field", style: 'padding-left:15px;', placeholder: "description" %>
+	  <%= f.text_area :description, class: "p-2 textarea-field", style: 'padding-left:15px;', placeholder: "description", required: true %>
 	  <br>
 	  <br>
-	  <%= f.text_field :reference_link, class: "input-field", placeholder: "REFERENCE LINK" %>
+	  <%= f.text_area :px_talk, class: "p-2 textarea-field", style: 'padding-left:15px;', placeholder: "px_talk", required: true %>
+	  <br>
+	  <br>
+	  <%= f.text_field :reference_link, class: "input-field", placeholder: "REFERENCE LINK", required: true %>
 	  <br>
 	  <br>
 

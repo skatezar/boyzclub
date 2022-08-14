@@ -1,4 +1,3 @@
-<%= render "layouts/header" %>
 <section style="margin: 100px;" class="d-flex-center">
 	
 	<%= form_for @watch do |f| %>
@@ -45,7 +44,10 @@
 	  <%= f.text_field :bracelet_material, class: "input-field", placeholder: "BRACELET MATERIAL" %>
 	  <br>
 	  <br>
-	  <%= f.text_area :description, class: "textarea-field", placeholder: "description" %>
+	  <%= f.text_area :description, class: "p-2 textarea-field", placeholder: "description" %>
+	  <br>
+	  <br>
+	  <%= f.text_area :px_talk, class: "p-2 textarea-field", style: 'padding-left:15px;', placeholder: "px_talk", required: true %>
 	  <br>
 	  <br>
 	  <%= f.text_field :reference_link, class: "input-field", placeholder: "REFERENCE LINK" %>
@@ -83,10 +85,3 @@
 	}
 </style>
 
-params.require(:watch).permit(:name, :condition, :production_year, 
-    		:price, :brand, :condition, :original_box, :original_papers, 
-    		:location, :listing_code, :model, :reference_number, :case_material, 
-    		:movement, :bracelet_material, :reference_link, :price_talk)
-  	end
-
-end
