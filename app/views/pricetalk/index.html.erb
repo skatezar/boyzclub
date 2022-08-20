@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>price talk</title>
+</head>
+<body>
+
+	<br>
+		<%= link_to "new price talk", new_pricetalk_path, class: "watch-btn" %>
+	<br>
+	<br>
+	<h3 class="center-txt">
+		Watch Price Talk
+	</h3>
+
+	<% @pricetalks.each do |pricetalk| %>
+		<div class="card-product m-5">
+			<% if pricetalk.photo1.key.present? %>
+				<%= cl_image_tag pricetalk.photo1.key, height: 375, width: 280, crop: :fill %>
+			<% end %>
+		  <div class="card-product-infos">
+		    <h2><%= pricetalk.title %></h2>
+		    <p><%= pricetalk.para1 %></p>
+		  </div>
+		</div>
+	<% end %>
+
+</body>
+</html>
+
+
+<style type="text/css">
+	.pricetalk_box{
+		height: 200px;
+	}
+
+	
+</style>
+
+

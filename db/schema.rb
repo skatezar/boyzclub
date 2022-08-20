@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_14_162834) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_20_105934) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -39,13 +39,25 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_14_162834) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "pricetalks", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.string "link1"
+    t.string "link2"
+    t.string "link3"
+    t.integer "price_prediction"
+    t.text "para1"
+    t.text "para2"
+    t.text "para3"
+  end
+
   create_table "watches", force: :cascade do |t|
     t.string "name"
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "description"
-    t.string "reference_link"
     t.string "condition"
     t.string "production_year"
     t.string "original_box"
@@ -58,7 +70,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_14_162834) do
     t.string "movement"
     t.string "case_material"
     t.string "bracelet_material"
-    t.text "px_talk"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

@@ -7,23 +7,43 @@
 <body>
 	<!-- desktop view -->
 	<br>
-	<div class="d-flex-around" >
-		<span class="mt-1">
-			<%= link_to "HOME", watch_index_path, class: 'header-btn' %>
-		</span>
 
+	<section class="desktop-div">
+		
+		<div class="d-flex-around" >
+			<span class="mt-1">
+				<%= link_to "HOME", watch_index_path, class: 'header-btn' %>
+			</span>
+
+			<span>
+				<h1>
+					<%= link_to "PRIVATE WATCHES", watch_index_path, class: 'no-deco round-bdr', style:'color:black;' %>	
+				</h1>
+			</span>
+			
+			<span class="mt-1">
+				<%= link_to "ABOUT", watch_index_path, class: 'header-btn' %>
+			</span>
+		</div>
+		<hr>
+	</section>
+
+	<section class="mobile-div">
 		<span>
-			<h1>
+			<h1 class="center-txt">
 				<%= link_to "PRIVATE WATCHES", watch_index_path, class: 'no-deco round-bdr', style:'color:black;' %>	
 			</h1>
 		</span>
-		
-		<span class="mt-1">
-			<%= link_to "ABOUT US", watch_index_path, class: 'header-btn' %>
-		</span>
-	</div>
-	
-	<hr>
+
+		<div class="d-flex-around" >
+
+				
+				<span class="mt-1">
+					<%= link_to "ABOUT", watch_index_path, class: 'header-btn' %>
+				</span>
+			</div>
+			<hr>
+	</section>
 	<!-- end desktop view -->
 
 	<!-- mobile view -->
@@ -43,4 +63,44 @@
 	.header-btn:hover{
 		color: pink;
 	}
+
+
+@media only screen and (min-width: 1000px) {
+  .mobile-div{
+    display:none;
+  }
+   .check_boxes{
+    font-size:13px;
+    width:50px;
+  }
+
+}
+
+@media (min-width: 1000px){
+  .mobile-div{
+    display:none;
+  }
+   .check_boxes{
+    font-size:13px;
+    width:50px;
+  }
+
+}
+@media (max-width: 1000px){
+  .desktop-div{
+    display: none;
+    margin: none;
+  }
+  .mobile-div{
+    display: "";
+  }
+  .check_boxes{
+    font-size:18px;
+    width:50px;
+  }
+}
+
 </style>
+
+
+

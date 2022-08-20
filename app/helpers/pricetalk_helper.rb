@@ -1,0 +1,2 @@
+module PricetalkHelper
+end
