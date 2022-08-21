@@ -1,0 +1,68 @@
+<h4 class="center-txt">ADMIN ONLY</h4>
+<br>
+<section class="d-flex-center">
+
+	<%= form_for @pricetalk, :url => pricetalk_index_path do |f| %>
+		
+	  <%= f.text_field :title, class: "input-field", placeholder: "Title", required: true %>
+	  <br>
+	  <br>
+	  <%= f.text_field :price_prediction, class: "input-field", placeholder: "price prediction", required: true %>
+	  <br>
+	  <br>
+	  <%= f.text_area :para1, class: "textarea-field p-2", placeholder: "Para 1", required: true %>
+	  <br>
+	  <br>
+	  <%= f.text_area :para2, class: "textarea-field p-2", placeholder: "Para 2", required: true %>
+	  <br>
+	  <br>
+	  <%= f.text_area :para3, class: "textarea-field p-3", placeholder: "Para 3", required: true %>
+	  <br>
+	  <br>
+	  <%= f.text_field :link1, class: "input-field", placeholder: "link 1", required: true %>
+	  <br>
+	  <br>
+	  <%= f.text_field :link2, class: "input-field", placeholder: "link 2", required: true %>
+	  <br>
+	  <br>
+	  <%= f.text_field :link3, class: "input-field", placeholder: "link 3", required: true%>
+	  <br>
+	  <br>
+	  <%= f.submit 'UPLOAD', :class => 'submit-btn' %>
+
+	<% end %>
+
+</section>
+
+
+<style type="text/css">
+	.input-field{
+		height: 35px;
+		min-height: 35px;
+		min-width: 300px;
+		width: 300px;
+		font-size: 16px;
+		padding-left: 15px;
+	}
+
+	.text_field{}
+
+	::placeholder{
+		font-size: 16px;
+		color: grey;
+	}
+
+	.textarea-field{
+		height: 80px;
+		width: 300px;
+	}
+
+	.submit-btn{
+		padding: 30px 120px;
+		background-color:  white;
+		border:  1px solid black;
+	}
+	.submit-btn:hover{
+		opacity:  0.5;
+	}
+</style>

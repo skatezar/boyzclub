@@ -70,3 +70,32 @@
 </style>
 
 
+<div class="container mt-2 d-flex justify-content-center">
+  <div class="row d-flex justify-content-around " >
+    <div class="col-6 col-md-4 col-lg-3 col-xl-3 d-flex justify-content-center mb-3 mt-4">
+         <% for x in @watches %>
+			<div class="">
+			<!-- watch box -->
+			<div style="border: 1px solid black;" class="box col-lg-3 col-md-3 col-sm-3">
+			<%= link_to	watch_path(x.id) do %>
+					<br>
+					<div class="d-flex justify-content-center">
+						<% if x.photo1.key.present? %>
+							<%= cl_image_tag x.photo1.key, height: 375, width: 280, crop: :fill %>
+						<% end %>
+					</div>
+			<% end %>
+					<p class="center-txt txt" style="text-decoration: none;">
+						<%= x.name %> - <%= x.price %>				
+					</p>
+					</p>
+				</div>
+			
+			</div>
+			<!-- watch box end -->
+			<% end %>
+	</div>
+  </div>
+</div>
+
+

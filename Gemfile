@@ -3,7 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.0"
 
+gem 'bootstrap', '~> 5.2.0'
+
 gem 'sass-rails'
+
+gem 'jquery-rails'
 
 #cloudinary
 gem "cloudinary"
@@ -77,3 +81,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+

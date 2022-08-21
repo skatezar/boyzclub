@@ -16,6 +16,8 @@
 
 @import "bootstrap/scss/bootstrap"; /* picks it up in node_modules! */
 
+@import "bootstrap";
+
 body{
         font-family: helvetica;
     }
@@ -78,6 +80,20 @@ body{
         }
 
 
+.link-btn{
+                padding: 10px;
+                border:  1px solid black;
+                margin: 5px 10px;
+                font-style: none;
+                color: black;
+                text-decoration: none;
+                border-radius: 3px;
+        }
+.link-btn:hover{
+        opacity:  0.5;
+        }
+
+
 .card-product {
   overflow: hidden;
   height: 170px;
@@ -109,4 +125,46 @@ body{
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+.no-style{
+                color: black;
+                text-decoration: none;
+        }
+
+
+
+@media only screen and (min-width: 1000px) {
+  .mobile-div{
+    display:none;
+  }
+   .check_boxes{
+    font-size:13px;
+    width:50px;
+  }
+
+}
+
+@media (min-width: 1000px){
+  .mobile-div{
+    display:none;
+  }
+   .check_boxes{
+    font-size:13px;
+    width:50px;
+  }
+
+}
+@media (max-width: 1000px){
+  .desktop-div{
+    display: none;
+    margin: none;
+  }
+  .mobile-div{
+    display: "";
+  }
+  .check_boxes{
+    font-size:18px;
+    width:50px;
+  }
 }

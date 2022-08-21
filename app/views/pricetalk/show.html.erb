@@ -1,1 +1,57 @@
-show.html.erb
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>pricetalk</title>
+</head>
+<body>
+
+<section class="desktop-div">
+	<h3 class="center-txt">
+		<%= @pricetalk.title %>
+	</h3>
+	<br>
+	<%= link_to 'EDIT', edit_pricetalk_path(@pricetalk), class: 'watch-btn' %>
+
+	<div class="d-flex justify-content-around m-5">
+		<div style="width:100%; margin-left: 15px;">
+			<div style="width:90%;">
+				<p style="width: 100%;">
+					<%= @pricetalk.para1 %>
+				</p>
+
+				<p class="center-txt">
+					<%= link_to 'Link to more', "#{@pricetalk.link1}", target: "_blank", class: "link-btn" %>
+				</p>
+			</div>
+			<!-- para 2 --> 
+			<div style="width:90%;">
+				<p style="width: 100%;">
+					<%= @pricetalk.para1 %>
+				</p>
+
+				<p class="center-txt">
+					<%= link_to 'Link to more', "#{@pricetalk.link1}", target: "_blank", class: "link-btn" %>
+				</p>
+			</div>
+			<!-- para 3 --> 
+			<div style="width:90%;">
+				<p style="width: 100%;">
+					<%= @pricetalk.para1 %>
+				</p>
+
+				<p class="center-txt">
+					<%= link_to 'Link to more', "#{@pricetalk.link1}", target: "_blank", class: "link-btn" %>
+				</p>
+			</div>	
+		</div>
+		<div>
+			<%= cl_image_tag @pricetalk.photo1.key, height: 600, class: "mySlides img-size", crop: :fill %>	
+		</div>
+		
+	</div>
+</section>
+
+</body>
+</html>

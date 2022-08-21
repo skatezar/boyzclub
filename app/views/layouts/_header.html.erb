@@ -12,7 +12,7 @@
 		
 		<div class="d-flex-around" >
 			<span class="mt-1">
-				<%= link_to "HOME", watch_index_path, class: 'header-btn' %>
+				<%= link_to "PRICETALK", pricetalk_index_path, class: 'header-btn' %>
 			</span>
 
 			<span>
@@ -22,12 +22,15 @@
 			</span>
 			
 			<span class="mt-1">
-				<%= link_to "ABOUT", watch_index_path, class: 'header-btn' %>
+				<%= link_to "ABOUT", about_path, class: 'header-btn' %>
 			</span>
 		</div>
 		<hr>
 	</section>
 
+	<!-- end desktop view -->
+	
+	<!-- mobile view -->
 	<section class="mobile-div">
 		<span>
 			<h1 class="center-txt">
@@ -35,18 +38,14 @@
 			</h1>
 		</span>
 
-		<div class="d-flex-around" >
-
-				
-				<span class="mt-1">
-					<%= link_to "ABOUT", watch_index_path, class: 'header-btn' %>
-				</span>
-			</div>
+		<span class="mt-1 d-flex justify-content-center">
+					<%= link_to "ABOUT", about_path, class: 'header-btn' %>
+		</span>
+		<span class="mt-1 d-flex justify-content-center">
+				<%= link_to "PRICETALK", pricetalk_index_path, class: 'header-btn' %>
+		</span>
 			<hr>
 	</section>
-	<!-- end desktop view -->
-
-	<!-- mobile view -->
 
 	<!-- end mobile view -->
 
@@ -101,6 +100,4 @@
 }
 
 </style>
-
-
 

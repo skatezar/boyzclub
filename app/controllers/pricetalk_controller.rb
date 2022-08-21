@@ -20,6 +20,26 @@ class PricetalkController < ApplicationController
 		end
 	end
 
+	def edit
+		@pricetalk = Pricetalk.find(params[:id])
+	end
+
+	def update
+		@pricetalk = Pricetalk.find(params[:id])
+		@pricetalk.udpate(pricetalk_params)
+		if @pricetalk.save
+			redirect_to pricetalk_path(@pricetalk)
+		else
+			render :new
+		end
+	end
+
+	def destroy
+		@pricetalk = Pricetalk.find(params[:id])
+    	@pricetalk.destroy
+    	redirect_to pricetalk_index_path
+	end
+
 	private
 
 	def pricetalk_params
