@@ -1,0 +1,47 @@
+<script type="text/javascript">
+  document.getElementById("header-tag").style.display = "none";
+</script>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>enter password</title>
+</head>
+<body style="background-color: rgba(0, 57, 81, 0.08);">
+<br>
+<h2 class="center-txt" style="font-size:14px;">ENTER PASSWORD</h2>
+<br>
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
+  data: {turbo: false}) do |f| %>
+  <div class="field" style="display:none;">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'admin@gmail.com', value: 'admin@gmail.com' %>
+  </div>
+
+  <div class="field d-flex justify-content-center">
+    <%= f.password_field :password, autocomplete: "current-password", class: "password" %>
+  </div>
+  <br>
+  <div class="actions d-flex justify-content-center">
+    <%= f.submit "SUBMIT", class: "pw-submit-btn" %>
+  </div>
+<% end %>
+
+</body>
+</html>
+
+<style type="text/css">
+  .password{
+    padding: 15px 60px;
+    font-size: 20px;
+  }
+  .pw-submit-btn{
+    padding:  5px 30px;
+    font-size: 20px;
+    background-color: white;
+    border:  1px solid black;
+  }
+</style>

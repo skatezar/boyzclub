@@ -11,7 +11,8 @@
   </head>
 
   <body style="background-color: rgba(0, 57, 81, 0.08);" class="m-4">
-    <%= render "layouts/header" %>
+    <%= render "layouts/header" unless @disable_nav %>
+
     <%= yield %>
   </body>
   <%= render 'layouts/footer' %>

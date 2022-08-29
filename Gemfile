@@ -3,6 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.0"
 
+gem "devise"
+
+gem "simple_form", github: "heartcombo/simple_form"
+
 gem 'bootstrap', '~> 5.2.0'
 
 gem 'sass-rails'
