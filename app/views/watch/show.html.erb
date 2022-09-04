@@ -48,9 +48,8 @@
         <%= @watch.description %>
       </p>
 
-      <button class='enquire-btn'>
-        ENQUIRE
-      </button>
+      <%= link_to 'ENQUIRE', new_order_path, class: 'enquire-btn' %>
+
 
     </div>
       <br>
@@ -226,9 +225,8 @@
         <%= @watch.description %>
       </p>
 
-      <button class='enquire-btn'>
-        ENQUIRE
-      </button>
+      <%= link_to 'ENQUIRE', new_order_path(watch_id: @watch.id), class: 'enquire-btn' %>
+
       <br>
       <br>
       <div class="d-flex">

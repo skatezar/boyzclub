@@ -1,0 +1,66 @@
+<h4 class="center-txt">
+	<%= @watch.name %> - <%= @watch.price %>
+</h4>
+<p class="center-txt">submit a question / soft order</p>
+<br>
+<section class="d-flex-center">
+
+	<%= form_for @order, :url => watch_index_path do |f| %>
+		
+	  <%= f.text_field :email, class: "input-field", placeholder: "EMAIL", required: true %>
+	  <br>
+	  <br>
+	  <%= f.text_field :phone, class: "input-field", placeholder: "PHONE", required: true %>
+	  <br>
+	  <br>
+	  <%= f.text_area :message, class: "text_field_msg w-100 p-2", placeholder: "MESSAGE", required: true %>
+  	  <br>
+  	  <br>
+  	  <%= f.submit 'SEND MESSAGE', :class => 'w-100 send-msg' %>
+	  <br>
+	  <br>
+  	  <h6 class="center-txt">WE RESPOND WITHIN 24 HOURS</h6>
+	<% end %>
+
+</section>
+
+
+<style type="text/css">
+	.input-field{
+		height: 35px;
+		min-height: 35px;
+		min-width: 300px;
+		width: 300px;
+		font-size: 16px;
+		padding-left: 15px;
+	}
+
+	.text_field_msg{
+		height: 100px;
+	}
+	.send-msg{
+		background-color:  white;
+		border:  1px solid black;
+		height: 50px;
+	}
+
+	::placeholder{
+		font-size: 16px;
+		color: grey;
+	}
+
+	.textarea-field{
+		height: 80px;
+		width: 315px;
+	}
+
+	.submit-btn{
+		padding: 30px 120px;
+		background-color:  white;
+		border:  1px solid black;
+	}
+	.submit-btn:hover{
+		opacity:  0.5;
+	}
+</style>
+
