@@ -5,7 +5,7 @@
 <br>
 <section class="d-flex-center">
 
-	<%= form_for @order, :url => watch_index_path do |f| %>
+	<%= form_for @order do |f| %>
 		
 	  <%= f.text_field :email, class: "input-field", placeholder: "EMAIL", required: true %>
 	  <br>
