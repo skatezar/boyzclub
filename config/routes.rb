@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root :to => "pages#index"
   get 'about', to: 'pages#about', as: :about
   get 'contact', to: 'pages#contact', as: :contact
+  get 'confirm_msg', to: 'pages#confirm_msg', as: :confirm_msg
   resources :pricetalk
   resources :watch
   resources :orders
