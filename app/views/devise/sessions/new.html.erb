@@ -1,8 +1,3 @@
-<script type="text/javascript">
-  document.getElementById("header-tag").style.display = "none";
-</script>
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,11 +11,13 @@
 <br>
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
   data: {turbo: false}) do |f| %>
-  <div class="field" style="display:;">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'admin@gmail.com', value: 'admin@gmail.com' %>
-  </div>
 
+  <div class="field" id="login_email">
+    <%= f.email_field :email, class: "password", autofocus: true, autocomplete: "email", placeholder: 'admin@gmail.com', value: 'admin@admin.com' %>
+  </div>
+  <br>
+  <br>
+  <br>
   <div class="field d-flex justify-content-center">
     <%= f.password_field :password, autocomplete: "current-password", class: "password" %>
   </div>
@@ -29,6 +26,16 @@
     <%= f.submit "SUBMIT", class: "pw-submit-btn" %>
   </div>
 <% end %>
+<br>  
+<br>  
+<br>  
+<br>  
+<br>  
+<br>  
+
+<button id="button-admin" class="pw-submit-btn">
+  ADMIN LOGIN
+</button>
 
 </body>
 </html>
@@ -44,4 +51,21 @@
     background-color: white;
     border:  1px solid black;
   }
+
+
 </style>
+
+
+<script type="text/javascript">
+  
+// get the element
+const button = document.getElementById('button-admin')
+login_email = document.getElementById("login_email");
+
+login_email.style.display = "none";
+// always checking if the element is clicked, if so, do alert('hello')
+button.addEventListener("click", () => {
+    login_email.style.display = "";
+});
+
+</script>

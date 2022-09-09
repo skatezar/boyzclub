@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,10 +7,11 @@
 	<title>price talk</title>
 </head>
 <body>
-
+<% if current_user.admin == 1 %>
 	<br>
 		<%= link_to "new price talk", new_pricetalk_path, class: "watch-btn" %>
 	<br>
+<% end %>
 	<br>
 	<h3 class="center-txt">
 		Watch Price Talk

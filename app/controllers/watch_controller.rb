@@ -1,4 +1,5 @@
 class WatchController < ApplicationController
+	before_action :authenticate_user!
 	def index
 		@watches = Watch.all
 	end

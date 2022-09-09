@@ -1,7 +1,10 @@
 <br>
-<%= link_to "new watch", new_watch_path, class: "watch-btn" %>
 
-<br>
+<% if current_user.admin == 1 %>
+	<%= link_to "new watch", new_watch_path, class: "watch-btn" %>
+<% end %>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,9 +13,10 @@
 	<title>watches</title>
 </head>
 <body>
-<br>
-<br>
 
+	<div class="d-flex justify-content-center">
+		<%= link_to	'SUBSCRIBE TO OUR MAILING LIST', mailinglist_index_path, class: 'cool-btn' %>	
+	</div>
 
 <span class="container">
 	<div class="row d-flex justify-content-center">
