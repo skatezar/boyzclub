@@ -1,0 +1,51 @@
+
+<br>
+<section class="d-flex-center">
+
+	<%= form_for @mail, :url => mailinglist_index_path do |f| %>
+		
+	  <%= f.text_field :mail, class: "input-field", placeholder: "EMAIL", required: true %>
+	  <br>
+	  <br>
+  	  <%= f.submit 'SUBMIT', :class => 'submit-btn' %>
+  	  
+	<% end %>
+
+</section>
+
+<div class="text-center mt-4">
+	<strong class="text-center">	  	
+		we send emails once a week with updates to the watches we can buy/sell. 
+	</strong>
+</div>
+
+
+<style type="text/css">
+	.input-field{
+		height: 35px;
+		min-height: 35px;
+		min-width: 300px;
+		width: 300px;
+		font-size: 16px;
+		padding-left: 15px;
+	}
+
+	.select-field{
+
+	}
+
+	::placeholder{
+		font-size: 16px;
+		color: grey;
+	}
+
+	.submit-btn{
+		padding: 10px 120px;
+		background-color:  white;
+		border:  1px solid black;
+	}
+	.submit-btn:hover{
+		opacity:  0.5;
+	}
+</style>
+

@@ -10,4 +10,7 @@ class PagesController < ApplicationController
 
 	def confirm_msg
 	end
+
+	def confirm_mail
+	end
 end

@@ -10,11 +10,15 @@
 <body>
 
 
+
+
 <span class="mobile-div">
+<% if current_user.admin == 1 %>
   <div class="d-flex justify-content-around">
     <%= link_to 'edit watch', edit_watch_path(@watch), class: 'reg-btn m-3' %>
     <%= link_to 'delete', watch_index_path(@watch), class: 'reg-btn m-3', method: :delete %>
   </div>
+<% end %>
   <br>
 <!-- mobile view -->
 
@@ -183,11 +187,13 @@
 
 <span class="desktop-div">
   
-<div class="d-flex justify-content-around">
-  <%= link_to 'edit watch', edit_watch_path(@watch), class: 'reg-btn m-3' %>
-  <%= link_to 'delete', watch_index_path(@watch), class: 'reg-btn m-3', method: :delete %>
-</div>
 
+<% if current_user.admin == 1 %>
+  <div class="d-flex justify-content-around">
+    <%= link_to 'edit watch', edit_watch_path(@watch), class: 'reg-btn m-3' %>
+    <%= link_to 'delete', watch_index_path(@watch), class: 'reg-btn m-3', method: :delete %>
+  </div>
+<% end %>
 <section class="d-flex justify-content-between main-box">
   <!-- images -->
 

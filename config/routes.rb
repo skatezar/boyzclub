@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   root :to => "watch#index"
   get 'about', to: 'pages#about', as: :about
+  get 'confirm_mail', to: 'pages#confirm_mail', as: :confirm_mail
   get 'contact', to: 'pages#contact', as: :contact
   get 'confirm_msg', to: 'pages#confirm_msg', as: :confirm_msg
   resources :pricetalk
