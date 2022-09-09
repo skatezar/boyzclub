@@ -7,7 +7,7 @@
 	<title>price talk</title>
 </head>
 <body>
-<% if current_user.admin == 1 %>
+<% if current_user.admin == true %>
 	<br>
 		<%= link_to "new price talk", new_pricetalk_path, class: "watch-btn" %>
 	<br>

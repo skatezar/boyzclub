@@ -1,7 +1,16 @@
 <br>
 
-<% if current_user.admin == 1 %>
+<% if current_user.admin == true %>
+<div class="d-flex justify-content-center">
 	<%= link_to "new watch", new_watch_path, class: "watch-btn" %>
+</div>
+	<br>
+	<br>
+<div class="d-flex justify-content-center">
+	<%= link_to "all enquiries", mailinglist_index_path, class: "cool-btn" %>
+</div>
+	<br>
+	<br>
 <% end %>
 
 
@@ -70,3 +79,4 @@
 		text-decoration: none;
 	}
 </style>
+
