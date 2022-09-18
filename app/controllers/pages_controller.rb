@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-	before_action :authenticate_user!
+	before_action :authenticate_user!, :except => [:enter, :contact]
 	
 	def index
 		@disable_nav = true
@@ -25,4 +25,9 @@ class PagesController < ApplicationController
 	def old_msg
 		@messages = Order.all
 	end
+
+	def enter
+		@disable_nav = true
+	end
+
 end

@@ -17,5 +17,5 @@
 
     <%= yield %>
   </body>
-  <%= render 'layouts/footer' %>
+  <%= render 'layouts/footer' unless @disable_nav %>
 </html>

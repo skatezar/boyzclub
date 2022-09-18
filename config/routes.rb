@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  root :to => "watch#index"
+  root :to => "pages#enter"
+  get 'enter', to: 'pages#enter', as: :enter
   get 'about', to: 'pages#about', as: :about
   get 'confirm_mail', to: 'pages#confirm_mail', as: :confirm_mail
   get 'contact', to: 'pages#contact', as: :contact

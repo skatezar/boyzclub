@@ -7,10 +7,12 @@
 	<title>price talk</title>
 </head>
 <body>
-<% if current_user.admin == true %>
-	<br>
-		<%= link_to "new price talk", new_pricetalk_path, class: "watch-btn" %>
-	<br>
+<% if current_user %>
+	<% if current_user.admin == true %>
+		<br>
+			<%= link_to "new price talk", new_pricetalk_path, class: "watch-btn" %>
+		<br>
+	<% end %>
 <% end %>
 	<br>
 	<h3 class="center-txt">
