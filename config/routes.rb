@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   get 'confirm_mail', to: 'pages#confirm_mail', as: :confirm_mail
   get 'contact', to: 'pages#contact', as: :contact
   get 'confirm_msg', to: 'pages#confirm_msg', as: :confirm_msg
+  get 'all_emails', to: 'pages#all_emails', as: :all_emails
+  get 'new_msg', to: 'pages#new_msg', as: :new_msg
+  get 'old_msg', to: 'pages#old_msg', as: :old_msg
+  
+
   resources :pricetalk
   resources :mailinglist
   resources :watch
