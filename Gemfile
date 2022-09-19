@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.0"
 
-gem 'devise', git: 'https://github.com/heartcombo/devise', branch: 'main'
+gem 'devise'
 
 gem "simple_form", github: "heartcombo/simple_form"
 
