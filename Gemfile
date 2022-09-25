@@ -7,6 +7,7 @@ gem 'devise'
 
 gem 'pg'
 
+
 gem "simple_form", github: "heartcombo/simple_form"
 
 gem 'bootstrap', '~> 5.2.0'
