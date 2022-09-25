@@ -81,5 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: boyzclub_production
-  
+  database: d5gdgasm2cttd8
+  username: svaqowymywdygk
+  password: <%= ENV["MYAPP_DATABASE_PASSWORD"] %>
