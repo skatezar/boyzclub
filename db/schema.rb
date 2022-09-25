@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_09_11_193836) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -39,15 +42,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_11_193836) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "enquiries", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "mailinglists", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "mail"
+    t.text "mail"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -91,18 +89,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_11_193836) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "description"
-    t.string "condition"
-    t.string "production_year"
-    t.string "original_box"
-    t.string "original_papers"
-    t.string "location"
-    t.string "listing_code"
-    t.string "brand"
-    t.string "model"
-    t.string "reference_number"
-    t.string "movement"
-    t.string "case_material"
-    t.string "bracelet_material"
+    t.text "condition"
+    t.text "production_year"
+    t.text "original_box"
+    t.text "original_papers"
+    t.text "location"
+    t.text "listing_code"
+    t.text "brand"
+    t.text "model"
+    t.text "reference_number"
+    t.text "movement"
+    t.text "case_material"
+    t.text "bracelet_material"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
