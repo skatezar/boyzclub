@@ -40,8 +40,14 @@
 						<% end %>
 					</div>
 			<% end %>
-					<p class="center-txt txt" style="text-decoration: none;">
-						<%= x.name %> - <%= x.price %>				
+
+			<h5 class="center-txt mt-2">
+				<strong>
+					<%= x.name %> 
+				</strong>
+			</h5>
+					<p class="center-txt txt mt-3" style="text-decoration: none; color: #118C4F;">
+						<%= x.currency %><%= x.price %>				
 					</p>
 					</p>
 			</div>
@@ -57,7 +63,7 @@
 <style type="text/css">
 	.box{
 		width: 320px;
-		height: 450px;
+		height: 500px;
 	}
 	.box:hover {
 		opacity: 0.5;

@@ -46,7 +46,7 @@ class WatchController < ApplicationController
 
 	def watch_params
     	params.require(:watch).permit(:name, :condition, :production_year, 
-    		:price, :description, :brand, :condition, :original_box, :original_papers, 
+    		:price, :currency, :description, :brand, :condition, :original_box, :original_papers, 
     		:location, :listing_code, :model, :reference_number, :case_material, 
     		:movement, :bracelet_material, :price_talk, :photo1, :photo2, :photo3)
   	end

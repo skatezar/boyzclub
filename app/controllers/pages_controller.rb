@@ -2,7 +2,6 @@ class PagesController < ApplicationController
 	before_action :authenticate_user!, :except => [:enter, :contact]
 	
 	def index
-		@disable_nav = true
 	end
 
 	def about

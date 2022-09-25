@@ -1,3 +1,6 @@
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
 
 <!DOCTYPE html>
 <html>
@@ -8,10 +11,6 @@
 	<title>watch view</title>
 </head>
 <body>
-
-
-
-
 <span class="mobile-div">
 <% if current_user.admin == true %>
   <div class="d-flex justify-content-around">
@@ -21,27 +20,38 @@
 <% end %>
   <br>
 <!-- mobile view -->
+<div class="img">
+  <div style='text-align:center;'>
+<h3 style='text-align: center;margin: 55px 0px;border-bottom: 2px solid #666; padding-bottom:10px'><%= @watch.name %> - <span style="color: #118C4F;"><%=@watch.currency%><%=@watch.price%></span></h3>
+</div>
+    <div id="carouselFade1" class="carousel slide carousel-fade" data-ride="carousel">
 
-    
-     <!-- slide show -->
-  <div  class="w3-display-container d-flex-center">
-    <%= cl_image_tag @watch.photo1.key, class: "mySlides img-size", crop: :fill %>
-    <div class="d-flex justify-content-center">
-      <button class="w3-button w3-black w3-display-left m-2" onclick="plusDivs(-1)">&#10094;</button>
-      <button class="w3-button w3-black w3-display-right m-2" onclick="plusDivs(1)">&#10095;</button>     
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active" style="height: 600px;">  
+
+            </div>
+            <div class="item" style="height: 600px;"> 
+            </div>
+            <div class="item" style="height: 600px;"> 
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carouselFade1" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carouselFade1" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    <%= cl_image_tag @watch.photo2.key, class: "mySlides img-size", crop: :fill %>
-    <% if @watch.photo3.present? %>
-      <%= cl_image_tag @watch.photo3.key, class: "mySlides img-size", crop: :fill %>
-    <% end %>
-  </div>
-  </div>
+</div>
+
   <!-- text -->
   <br>
   <div class="m-2">
-      <h2 class="center-txt">
-        <%= @watch.name %> - <span>€ <%=@watch.price%></span>
-      </h2>
       <h6 class="center-txt"> 
         <%= @watch.location %>
       </h6>
@@ -194,34 +204,48 @@
     <%= link_to 'delete', watch_index_path(@watch), class: 'reg-btn m-3', method: :delete %>
   </div>
 <% end %>
-<section class="d-flex justify-content-between main-box">
+<section class="d-flex justify-content-around main-box">
   <!-- images -->
 
-  <div class="imgs">
-    
-     <!-- slide show -->
-  <div  class="w3-display-container d-flex-center">
-    <%= cl_image_tag @watch.photo1.key, height: 800, class: "mySlides img-size", crop: :fill %>
-  <div class="d-flex justify-content-center">
-      <button class="w3-button w3-black w3-display-left m-2" onclick="plusDivs(-1)">&#10094;</button>
-      <button class="w3-button w3-black w3-display-right m-2" onclick="plusDivs(1)">&#10095;</button>     
+
+<div class="img">
+  <div style='text-align:center;'>
+<h3 style='text-align: center;margin: 55px 0px;border-bottom: 2px solid #666; width: 750px;padding-bottom:10px'><%= @watch.name %> - <span style="color: #118C4F;"><%=@watch.currency%><%=@watch.price%></span></h3>
+</div>
+    <div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">  
+
+            </div>
+            <div class="item"> 
+            </div>
+            <div class="item"> 
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carouselFade" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carouselFade" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    <%= cl_image_tag @watch.photo2.key, height: 800, class: "mySlides img-size", crop: :fill %>
-    <% if @watch.photo3.present? %>
-      <%= cl_image_tag @watch.photo3.key, height: 800, class: "mySlides img-size", crop: :fill %>
-    <% end %>
-
-    
-  </div>
-
-  <!-- slideshow end -->
-
-  </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</div>
   <!-- text -->
   <div class="desc m-2">
-      <h2 class="center-txt">
-        <%= @watch.name %> - <span>€ <%=@watch.price%></span>
-      </h2>
+      <br>
+      <br>
+      <br>  
+      <br>
       <h6 class="center-txt"> 
         <%= @watch.location %>
       </h6>
@@ -367,53 +391,94 @@
 
 </span>
 
-<!-- slide show -->
-<style>
-	.mySlides {display:none;}
-	.img-size{
-		max-width: 90%;
-	}
-  .w3-button{
-    height: 50px;
-    width: 100px;
-    background-color: transparent;
-  }
-  .w3-button:hover{
-    opacity: 0.5;
-  }
-  
 
-  .main-box{
-    height: 800px;
-    margin: 50px;
-  }
-  .imgs{
-    width: 65%;
-  }
-  .desc{
-    width: 35%;
-  }
+<style type="text/css">
+  
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+} 
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+} 
+.carousel-caption {
+    text-shadow: 0 1px 4px rgba(0,0,0,.9);
+  font-size:17px
+}
+.carousel-caption h3 {
+  font-size: 30px;
+  font-family: 'Lato', sans-serif;
+}
+    .carousel,
+    .carousel-inner,
+    .carousel-inner .item {
+      height: 100%;
+    } 
+    .item:nth-child(1) {
+      background: url("<%= cl_image_path @watch.photo1.key %>");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+    }
+
+    .item:nth-child(2) {
+      background: url("<%= cl_image_path @watch.photo2.key %>");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+    }
+
+    .item:nth-child(3) {
+      background: url("<%= cl_image_path @watch.photo3.key %>");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+    }
+
 
 </style>
 
-
 <script type="text/javascript">
-	var slideIndex = 1;
-showDivs(slideIndex);
+  $('#carouselFade').carousel();
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
+  $('#carouselFade1').carousel();
 </script>
-<!-- slide show end -->
+

@@ -1,4 +1,5 @@
 class PricetalkController < ApplicationController
+	before_action :authenticate_user!
 	def index
 		@pricetalks = Pricetalk.all
 	end
