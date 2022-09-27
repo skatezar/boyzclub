@@ -18,7 +18,11 @@
 	<h3 class="center-txt">
 		Watch Price Talk
 	</h3>
-    
+
+	<% if @pricetalks.any? == false %>
+		<p>pricetalk coming soon....</p>
+	<% end %>
+
 	<% @pricetalks.each do |pricetalk| %>
 	<%= link_to pricetalk_path(pricetalk.id), class: 'no-style' do %>	
 		<div class="card-product m-5">
