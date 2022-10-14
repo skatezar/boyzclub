@@ -7,7 +7,7 @@
 	  <%= f.text_field :mail, class: "input-field", placeholder: "EMAIL", required: true %>
 	  <br>
 	  <br>
-  	  <%= f.button 'SUBMIT', :class => 'submit-btn' %>
+  	  <%= f.button 'SUBMIT', :class => 'submit-btn green', :style => 'background-color: green;' %>
   	  
 	<% end %>
 
@@ -21,6 +21,10 @@
 
 
 <style type="text/css">
+	.green{
+		background-color:  green;
+		color:  white;
+	}
 	.input-field{
 		height: 35px;
 		min-height: 35px;
