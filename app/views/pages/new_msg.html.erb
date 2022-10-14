@@ -10,7 +10,7 @@
 <body>
 
 	<h4 class="center-txt">
-		ALL EMAILS
+		ALL MESSAGES
 	</h4>
 
 	<br>
@@ -35,7 +35,13 @@
 		<p class="center-txt">
 				<%= message.message %> 
 		</p>
+	<div class="d-flex">
+		<%= link_to 'READ', msg_read_path(:msg_id => message.id), class: 'cool-btn green' %>		
+	</div>
+
 	</section>
+	
+
 	<% end %>
 <% end %>
 </body>

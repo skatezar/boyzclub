@@ -2,12 +2,12 @@
 
 <% if current_user.admin == true %>
 <div class="d-flex justify-content-center">
-	<%= link_to "new watch", new_watch_path, class: "watch-btn" %>
+	<%= link_to "NEW WATCH", new_watch_path, class: "cool-btn red" %>
 </div>
 	<br>
 	<br>
 <div class="d-flex justify-content-center">
-	<%= link_to "all enquiries", all_emails_path, class: "cool-btn" %>
+	<%= link_to "ADMIN PANEL", all_emails_path, class: "cool-btn red" %>
 </div>
 	<br>
 	<br>
@@ -84,5 +84,12 @@
 		color: black;
 		text-decoration: none;
 	}
+
+	.red{
+		background-color: #660000;
+		color:  white;
+	}
 </style>
+
+
 

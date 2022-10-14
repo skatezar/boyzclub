@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'all_emails', to: 'pages#all_emails', as: :all_emails
   get 'new_msg', to: 'pages#new_msg', as: :new_msg
   get 'old_msg', to: 'pages#old_msg', as: :old_msg
-  
+  get 'msg_read', to: 'pages#msg_read', as: :msg_read  
 
   resources :pricetalk
   resources :mailinglist

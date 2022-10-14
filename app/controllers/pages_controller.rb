@@ -29,4 +29,10 @@ class PagesController < ApplicationController
 		@disable_nav = true
 	end
 
+	def msg_read
+		@order = Order.find(params[:msg_id])
+		@order.update(:read => true)
+		redirect_to new_msg_path
+	end
+
 end
